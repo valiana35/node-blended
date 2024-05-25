@@ -7,7 +7,7 @@ export const createProducts = async (amount) => {
     const products = await fs.readFile(DB_PATH, "utf-8");
     const parseProducts = JSON.parse(products);
     for (let i = 0; i < amount; i += 1) {
-        parseProducts.push(createFakeProduct());
+      parseProducts.push(createFakeProduct());
     }
     await fs.writeFile(DB_PATH, JSON.stringify(parseProducts, null, 2));
   } catch (error) {

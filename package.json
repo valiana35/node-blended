@@ -7,7 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create": "node src/scripts/createProducts",
-    "getExpensive": "node src/scripts/getExpensiveProducts"
+    "getExpensive": "node src/scripts/getExpensiveProducts",
+    "getRandomProduct": "node src/scripts/getRandomProduct",
+    "writeFiles": "node src/scripts/writeFiles",
+    "readFolder": "node src/scripts/readFolder"
   },
   "keywords": [],
   "author": "Valentina Ivanova <valiaivanova8319@gmail.com>",
