@@ -1,6 +1,5 @@
 [
   {
-    "_id": "60d0fe4f5311236168a109ca",
     "name": "Smartphone",
     "price": 699.99,
     "category": "electronics",
@@ -9,7 +8,6 @@
     "updatedAt": "2024-05-28T08:45:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109cb",
     "name": "Laptop",
     "price": 1299.99,
     "category": "electronics",
@@ -18,7 +16,6 @@
     "updatedAt": "2024-04-20T11:00:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109cc",
     "name": "Refrigerator",
     "price": 499.99,
     "category": "other",
@@ -27,7 +24,6 @@
     "updatedAt": "2024-05-15T09:15:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109cd",
     "name": "T-Shirt",
     "price": 19.99,
     "category": "clothing",
@@ -36,7 +32,6 @@
     "updatedAt": "2024-02-25T13:10:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109ce",
     "name": "Novel",
     "price": 14.99,
     "category": "books",
@@ -45,7 +40,6 @@
     "updatedAt": "2024-04-10T15:50:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109cf",
     "name": "Headphones",
     "price": 59.99,
     "category": "electronics",
@@ -54,7 +48,6 @@
     "updatedAt": "2024-01-18T17:25:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109d0",
     "name": "Washing Machine",
     "price": 399.99,
     "category": "other",
@@ -63,7 +56,6 @@
     "updatedAt": "2024-05-05T11:05:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109d1",
     "name": "Running Shoes",
     "price": 89.99,
     "category": "clothing",
@@ -72,7 +64,6 @@
     "updatedAt": "2024-03-20T14:40:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109d2",
     "name": "Cookbook",
     "price": 24.99,
     "category": "books",
@@ -81,7 +72,6 @@
     "updatedAt": "2024-01-30T12:35:00Z"
   },
   {
-    "_id": "60d0fe4f5311236168a109d3",
     "name": "Smartwatch",
     "price": 199.99,
     "category": "electronics",
