@@ -7,8 +7,11 @@ import ctrlWrapper from '../utils/ctrlWrapper.js';
 import { Router } from 'express';
 import { validateBody } from '../utils/validateBody.js';
 import { productsSchema } from '../validation/products.js';
+import { checkToken } from '../middlewares/auth.js';
 
 const router = Router();
+
+router.use(checkToken);
 
 router.get('/', ctrlWrapper(getProductsController));
 
