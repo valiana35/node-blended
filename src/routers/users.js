@@ -9,7 +9,7 @@ import {
 
 const router = Router();
 router.post(
-  '/register',
+  '/signup',
   validateBody(registerSchema),
   ctrlWrapper(registerUserController),
 );

@@ -1,29 +1,29 @@
 import { UserModel } from '../db/User.js';
 import bcrypt from 'bcrypt';
-import { SessionModel } from '../db/Session.js';
-import { randomBytes } from 'crypto';
+import jsonwebtoken from 'jsonwebtoken';
+import { env } from '../utils/env.js';
 
 export const findUserByEmail = (email) => UserModel.findOne({ email });
 
-export const createUser = async (payload) => {
-  const hasedPassword = await bcrypt.hash(payload.password, 10);
+const updateUserWithToken = (userId) => {
+  const token = jsonwebtoken.sign({ id: userId }, env('JWT_SECRET'));
 
-  return UserModel.create({ ...payload, password: hasedPassword });
+  const userWithToken = UserModel.findByIdAndUpdate(
+    userId,
+    { token },
+    { new: true },
+  );
+  return userWithToken;
 };
 
-export const loginUser = async (userId) => {
-  await SessionModel.deleteOne({ userId });
-
-  const accessToken = randomBytes(30).toString('base64');
-  const refreshToken = randomBytes(30).toString('base64');
-
-  const newSession = SessionModel.create({
-    userId,
-    accessToken,
-    refreshToken,
-    accessTokenValidUntil: Date.now() + 1000 * 60 * 15,
-    refreshTokenValidUntil: Date.now() + 1000 * 60 * 60 * 24 * 7,
+export const createUser = async (userData) => {
+  const cryptPassword = await bcrypt.hash(userData.password, 10);
+  const newUser = await UserModel.create({
+    ...userData,
+    password: cryptPassword,
   });
 
-  return newSession;
+  return updateUserWithToken(newUser._id);
 };
+
+export const loginUser = async (userId) => {};
