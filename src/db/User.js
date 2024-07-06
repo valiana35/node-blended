@@ -1,4 +1,3 @@
-import { required } from 'joi';
 import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema(
@@ -17,7 +16,6 @@ const userSchema = new Schema(
     },
     token: {
       type: String,
-      required: true,
     },
   },
 

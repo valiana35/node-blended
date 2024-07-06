@@ -5,7 +5,7 @@ import { env } from '../utils/env.js';
 
 export const findUserByEmail = (email) => UserModel.findOne({ email });
 
-const updateUserWithToken = (userId) => {
+export const updateUserWithToken = (userId) => {
   const token = jsonwebtoken.sign({ id: userId }, env('JWT_SECRET'));
 
   const userWithToken = UserModel.findByIdAndUpdate(
